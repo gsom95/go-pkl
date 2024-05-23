@@ -1,0 +1,9 @@
+@go.Package { name = "github.com/gsom95/go-pkl/gen/config" }
+module exp.MainConfig
+
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.6.0#/go.pkl"
+import "HttpServer.pkl"
+
+server = new HttpServer {
+  port = 7000
+}

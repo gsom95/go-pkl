@@ -1,0 +1,18 @@
+@go.Package { name = "github.com/gsom95/go-pkl/gen/httpserver" }
+module exp.HttpServer
+
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.6.0#/go.pkl"
+
+host: String(!isEmpty) = "localhost"
+
+typealias Port = UInt16
+port: Port = 8080
+
+typealias TimeoutDuration = Duration
+
+class Timeouts {
+  readTO: TimeoutDuration = 10.s
+  writeTO: TimeoutDuration = 10.s
+}
+
+timeouts: Timeouts
